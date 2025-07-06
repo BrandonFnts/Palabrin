@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Palabrin</string>
+
+    <!-- StringResources for Auth -->
+    <string name="welcome_title">Bienvenido a LogiTrans</string>
+    <string name="welcome_body">Iniciar sesión</string>
+    <string name="auth_login_title">Iniciar sesión</string>
+    <string name="auth_login_email">Correo electrónico</string>
+    <string name="auth_login_password">Contraseña</string>
+    <string name="auth_register_title">Regístrate</string>
+    <string name="auth_error_login">Error al iniciar sesión</string>
+    <string name="auth_success_login">Inicio de sesión exitoso"</string>
+    <string name="auth_error_register">Error al registrarse</string>
+    <string name="auth_success_register">Registro exitoso"</string>
+    <string name="auth_register_name">Nombre</string>
+    <string name="auth_register_confirm_password">Confirmar contraseña</string>
+    <string name="auth_no_account">¿No tienes una cuenta? </string>
+    <string name="auth_already_account">Ya tengo una cuenta y quiero </string>
+    <string name="auth_login_dialog">Iniciar Sesión</string>
+    <string name="auth_dialog_tittle">¡Necesitas una cuenta!</string>
+    <string name="auth_dialog_body">Para poder acceder a estas funciones tienes que iniciar sesion o registrarte</string>
+    <string name="weight_placeholder">Ej. 56.4 kg</string>
+    <string name="height_placeholder">Ej. 1.72 mts</string>
+    <string name="age_placeholder">Ej. 20 años</string>
+
+    <!-- StringResources for Dialogs -->
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="dialog_confirm">Aceptar</string>
+    <string name="continue_text">Continuar</string>
+    <string name="back_text">Regresar</string>
+
+    <!--StringResources for profileScreen-->
+    <string name="notification_option_title">Notificaciones de la aplicación</string>
+    <string name="notification_option_body">Cuando están activas podemos enviarte notificaciones sobre rentas cercanas con tus últimos intereses.</string>
+    <string name="verify_title">Verificar Perfil</string>
+    <string name="student_verify_body">Verifica que eres estudiante para tener acceso a todas las funciones</string>
+    <string name="owner_verify_body">Verifica que eres dueño de una propiedad para tener acceso a todas las funciones</string>
+    <string name="Info_option_title">Información de la aplicación</string>
+    <string name="Info_option_body">Esta aplicación está hecha por @Tralareritos. Versión de la app: 1.0.0</string>
+    <string name="Crash_Error_title">¿Todo bien?</string>
+    <string name="Crash_Error_body">"Reporta un problema que haya ocurrido en la app."</string>
+
+    <!-- StringResources for Validations -->
+    <string name="val_email_empty">El email no debe de estar vacio</string>
+    <string name="val_email_invalid">El email no es valido</string>
+    <string name="val_password_empty">La contraseña no debe estar vacía.</string>
+    <string name="val_password_invalid">La contraseña debe contener una letra mayúscula, una minúscula, un número, un caracter especial y tener mínimo 8 caracteres.</string>
+    <string name="val_text_empty">El campo no puede estar vacio.</string>
+    <string name="val_text_invalid">No debe de haber espacios en blanco al principio.</string>
+    <string name="val_password_match">Las contraseñas no coinciden</string>">
+    <string name="val_weight_invalid">El peso debe ser mayor a cero</string>
+    <string name="val_weight_too_high">Peso demasiado alto</string>
+    <string name="val_height_invalid">La altura debe ser mayor a cero</string>
+    <string name="val_height_too_high">Altura demasiado alta"</string>
+    <string name="val_age_invalid">La edad debe ser mayor a cero</string>
+    <string name="val_age_too_high">Edad demasiado alta</string>
+    <string name="val_diseases_invalid">Se debe seleccionar al menos una enfermedad</string>
+</resources>

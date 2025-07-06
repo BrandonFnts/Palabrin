@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "285735871043",
+    "project_id": "palabrin-10c68",
+    "storage_bucket": "palabrin-10c68.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285735871043:android:c29ce10ded0f63dfd06af6",
+        "android_client_info": {
+          "package_name": "mx.uttt.palabrin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-9bcSu1Q1LL054QU7lpou3B_HjCT1e0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
