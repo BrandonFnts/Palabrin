@@ -55,4 +55,14 @@
     <string name="val_age_invalid">La edad debe ser mayor a cero</string>
     <string name="val_age_too_high">Edad demasiado alta</string>
     <string name="val_diseases_invalid">Se debe seleccionar al menos una enfermedad</string>
+
+    <!-- StringResources for Home -->
+    <string name="val_game_abcd_title">Abecedario</string>
+    <string name="val_game_abcd_description">Aprende las letras con sonidos y ejemplos</string>
+    <string name="val_game_write_title">Escribir</string>
+    <string name="val_game_write_description">Practica trazando letras y palabras</string>
+    <string name="val_game_tales_title">Cuentos</string>
+    <string name="val_game_tales_description">Lee historias divertidas e interactivas</string>
+    <string name="val_game_title">Juegos</string>
+    <string name="val_game_description">Completa palabras y resuelve acertijos</string>
 </resources>

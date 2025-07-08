@@ -38,7 +38,7 @@ fun AppLogo() {
         Spacer(modifier = Modifier.width(10.dp))
         Text(
             "Palabrín",
-            color = MaterialTheme.colorScheme.secondary,
+            color = MaterialTheme.colorScheme.onPrimary,
             fontSize = 35.sp,
             fontWeight = FontWeight.Black
         )

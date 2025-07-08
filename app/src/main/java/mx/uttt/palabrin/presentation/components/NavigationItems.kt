@@ -94,7 +94,7 @@ fun TopAppBar(visible : Boolean = true) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(120.dp)
-                .background(MaterialTheme.colorScheme.background),
+                .background(MaterialTheme.colorScheme.primary),
             contentAlignment = Alignment.BottomStart
         ) {
             AppLogo()
