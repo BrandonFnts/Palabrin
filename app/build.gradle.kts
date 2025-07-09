@@ -121,4 +121,6 @@ dependencies {
     // Actividad Compose específica
     implementation(libs.androidx.activity.compose.v131)
 
+    implementation(libs.androidx.ui.text.google.fonts)
+
 }
