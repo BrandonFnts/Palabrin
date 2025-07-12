@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -71,7 +72,6 @@ fun ProfileContent(
     val scrollState = rememberScrollState()
 
     Column(
-
         modifier = modifier
             .verticalScroll(scrollState)
             .padding(paddingValues = paddingValues)
@@ -108,52 +108,56 @@ fun ProfileHeader(viewModel: ProfileViewModel) {
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(24.dp)
         ) {
-            Box {
-                Image(
-                    painter = painterResource(id = R.drawable.fumo),
-                    contentDescription = "Foto de perfil",
-                    modifier = Modifier
-                        .size(140.dp)
-                        .clip(CircleShape)
-                        .border(3.dp, MaterialTheme.colorScheme.primary, CircleShape)
-                )
-
-                IconButton(
-                    onClick = { /* TODO: Navegar a Configuración */ },
-                    modifier = Modifier
-                        .align(Alignment.BottomEnd)
-                        .offset(x = 4.dp, y = 4.dp)
-                        .size(40.dp),
-                    colors = IconButtonDefaults.iconButtonColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
-                        contentColor = MaterialTheme.colorScheme.onPrimary
+            Column {
+                Box {
+                    Image(
+                        painter = painterResource(id = R.drawable.fumo),
+                        contentDescription = "Foto de perfil",
+                        modifier = Modifier
+                            .size(140.dp)
+                            .clip(CircleShape)
+                            .border(3.dp, MaterialTheme.colorScheme.primary, CircleShape)
                     )
-                ) {
-                    Icon(Icons.Default.Settings, contentDescription = "Configurar")
+
+                    IconButton(
+                        onClick = { /* TODO: Navegar a Configuración */ },
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .offset(x = 4.dp, y = 4.dp)
+                            .size(40.dp),
+                        colors = IconButtonDefaults.iconButtonColors(
+                            containerColor = MaterialTheme.colorScheme.primary,
+                            contentColor = MaterialTheme.colorScheme.onPrimary
+                        )
+                    ) {
+                        Icon(Icons.Default.Settings, contentDescription = "Configurar")
+                    }
                 }
             }
 
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.width(20.dp))
 
-            Text(
-                text = name,
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.Bold
-            )
+            Column {
+                Text(
+                    text = name,
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold
+                )
 
-            Text(
-                text = email,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+                Text(
+                    text = email,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
 
-            Spacer(modifier = Modifier.height(12.dp))
+                Spacer(modifier = Modifier.height(12.dp))
 
-            SimpleChip(text = type)
+                SimpleChip(text = type)
+            }
         }
     }
 }
@@ -305,7 +309,7 @@ fun LogOut(
                     scope.launch {
                         viewModel.logOut()
                     }
-                    navController.navigate(Routes.LOGIN.name) {
+                    navController.navigate(Routes.HOME.name) {
                         popUpTo(navController.graph.startDestinationId) {
                             inclusive = false
                         }

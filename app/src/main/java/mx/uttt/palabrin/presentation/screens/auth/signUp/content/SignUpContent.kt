@@ -105,7 +105,7 @@ fun RegisterSection(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 24.dp, vertical = 16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.Center
         ) {
             Button(onClick = {
                 coroutineScope.launch {

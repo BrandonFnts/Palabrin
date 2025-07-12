@@ -22,8 +22,6 @@ class MainActivityViewModel @Inject constructor(
     private val _isAllOk = MutableStateFlow<Boolean?>(null)
     val isAllOk: StateFlow<Boolean?> = _isAllOk
 
-    private var authChecked = false
-
     // Init
     init {
         verifyUser()
@@ -32,19 +30,11 @@ class MainActivityViewModel @Inject constructor(
     //Functions
     private fun verifyUser() {
         _fireAuth.addAuthStateListener { firebaseAuth ->
-            if (!authChecked) {
-                _isLoggedIn.value = firebaseAuth.currentUser != null
-                authChecked = true
-            }
+            _isLoggedIn.value = firebaseAuth.currentUser != null
         }
     }
 
-
-    fun verifyRouteTop(currentRoute: String?): Boolean {
-        return !(currentRoute == Routes.LOGIN.name || currentRoute == Routes.SIGNUP.name)
-    }
-
     fun verifyRouteBottom(currentRoute: String?): Boolean {
-        return !(currentRoute == Routes.LOGIN.name || currentRoute == Routes.SIGNUP.name)
+        return (currentRoute == Routes.HOME.name || currentRoute == Routes.PROFILE.name)
     }
 }

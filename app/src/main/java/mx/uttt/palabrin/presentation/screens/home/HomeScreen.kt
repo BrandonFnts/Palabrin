@@ -9,7 +9,7 @@ import mx.uttt.palabrin.presentation.screens.home.content.HomeContent
 fun HomeScreen(navController: NavController){
     Scaffold(
         content = { innerPadding ->
-            HomeContent(innerPadding)
+            HomeContent(innerPadding, navController)
         }
     )
 }

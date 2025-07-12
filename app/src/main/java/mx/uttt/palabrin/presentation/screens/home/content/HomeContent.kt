@@ -4,12 +4,14 @@ import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
@@ -31,28 +33,26 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import mx.uttt.palabrin.R
+import mx.uttt.palabrin.presentation.enums.Routes
 import java.nio.file.WatchEvent
 
 @Composable
 fun HomeContent(
-    padding: PaddingValues
+    padding: PaddingValues,
+    navController: NavController
 ) {
-    Box(
-
-    ){
-
-    }
+    FourOptions(navController, padding)
 }
 
-@Preview(showBackground = true)
 @Composable
-fun FourOptions() {
+fun FourOptions(navController: NavController, padding: PaddingValues) {
     LazyColumn(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
+            .fillMaxSize()
+            .padding(padding),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         item {
@@ -65,7 +65,8 @@ fun FourOptions() {
                     title = R.string.val_game_abcd_title,
                     description = R.string.val_game_abcd_description,
                     modifier = Modifier.weight(1f),
-                    color = Color.Blue
+                    color = Color.Blue,
+                    onClick = { navController.navigate(Routes.ALPHABET.name) }
                 )
                 OptionCards(
                     icon = R.drawable.ic_write,
@@ -107,11 +108,13 @@ fun OptionCards(
     @StringRes title: Int,
     @StringRes description: Int,
     modifier: Modifier = Modifier,
-    color: Color
+    color: Color,
+    onClick: () -> Unit = {}
 ) {
     Card(
         modifier = modifier
-            .heightIn(min = 180.dp),
+            .heightIn(min = 180.dp)
+            .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
@@ -121,7 +124,7 @@ fun OptionCards(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Icon(
-                modifier = Modifier.clip(RoundedCornerShape(10.dp)).background(color = color).padding(5.dp),
+                modifier = Modifier.clip(RoundedCornerShape(15.dp)).background(color = color).padding(8.dp),
                 painter = painterResource(id = icon),
                 contentDescription = null,
                 tint = Color.White
