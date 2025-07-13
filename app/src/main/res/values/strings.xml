@@ -70,9 +70,10 @@
     <string name="veruser_title_login">No tienes una cuenta</string>
     <string name="veruser_text_login">Crea una cuenta para poder guardar tu progreso y compartirlo a traves de dispositivos</string>
 
-    <!-- StringResources for games -->
+    <!-- StringResources for speak words -->
     <string name="letter_game_title">Aprende el abecedario</string>
     <string name="letter_game_words_with">Palabras con</string>
+    <string name="letter_game_action">¡Di las palabras!</string>
 
     <!--StringResources for draw-->
     <string name="val_content_description_back_button">Volver</string>

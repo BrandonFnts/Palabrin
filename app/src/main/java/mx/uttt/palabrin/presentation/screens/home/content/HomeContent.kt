@@ -5,6 +5,7 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -39,15 +40,21 @@ fun HomeContent(
     padding: PaddingValues,
     navController: NavController
 ) {
-    FourOptions(navController, padding)
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(padding),
+        contentAlignment = Alignment.Center
+    ){
+        FourOptions(navController, padding)
+    }
 }
 
 @Composable
 fun FourOptions(navController: NavController, padding: PaddingValues) {
     LazyColumn(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(padding),
+            .fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         item {
