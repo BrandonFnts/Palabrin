@@ -7,6 +7,7 @@ enum class Routes {
     LOGIN,
     SIGNUP,
     PROFILE,
+    DRAW,
     ALPHABET,
     LETTERGAME
 }

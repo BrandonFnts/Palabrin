@@ -14,6 +14,7 @@ import mx.uttt.palabrin.presentation.screens.profile.ProfileScreen
 import mx.uttt.palabrin.presentation.screens.userActivities.alphabet.AlphabetScreen
 import mx.uttt.palabrin.presentation.screens.userActivities.alphabet.game.AlphabetGameScreen
 import mx.uttt.palabrin.presentation.screens.userActivities.alphabet.game.content.AlphabetViewModel
+import mx.uttt.palabrin.presentation.screens.userActivities.draw.DrawScreen
 import mx.uttt.palabrin.presentation.screens.userActivities.read.ReadScreen
 import mx.uttt.palabrin.presentation.screens.userActivities.write.WriteScreen
 
@@ -21,9 +22,11 @@ fun NavGraphBuilder.userRoutes(navController: NavController, isSignedIn: Boolean
     composable(Routes.HOME.name) { HomeScreen(navController) }
     composable(Routes.LOGIN.name) { LoginScreen(navController) }
     composable(Routes.SIGNUP.name) { SignUpScreen(navController) }
-    composable(Routes.PROFILE.name) { ProfileScreen(navController, isSignedIn) }
+    composable(Routes.PROFILE.name) { ProfileScreen(navController = navController, isSignedIn = isSignedIn) }
     composable(Routes.READ.name) { ReadScreen(navController) }
     composable(Routes.WRITE.name) { WriteScreen(navController) }
+    composable(Routes.DRAW.name) { DrawScreen(navController) }
+
     composable(Routes.ALPHABET.name) { AlphabetScreen(navController) }
     composable(
         route = "LETTERGAME/{letter}",

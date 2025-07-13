@@ -1,12 +1,10 @@
 package mx.uttt.palabrin.presentation.screens.home.content
 
-import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -31,13 +29,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import kotlinx.coroutines.delay
 import mx.uttt.palabrin.R
 import mx.uttt.palabrin.presentation.enums.Routes
-import java.nio.file.WatchEvent
 
 @Composable
 fun HomeContent(
@@ -73,7 +68,8 @@ fun FourOptions(navController: NavController, padding: PaddingValues) {
                     title = R.string.val_game_write_title,
                     description = R.string.val_game_write_description,
                     modifier = Modifier.weight(1f),
-                    color = Color.Green
+                    color = Color.Green,
+                    onClick = { navController.navigate(Routes.DRAW.name) }
                 )
             }
         }

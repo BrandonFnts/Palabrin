@@ -73,4 +73,22 @@
     <!-- StringResources for games -->
     <string name="letter_game_title">Aprende el abecedario</string>
     <string name="letter_game_words_with">Palabras con</string>
+
+    <!--StringResources for draw-->
+    <string name="val_content_description_back_button">Volver</string>
+    <string name="val_draw_title">¡Dibuja la letra!</string>
+    <string name="val_strack_title">Racha</string>
+    <string name="val_leave_title">¿Salir?</string>
+    <string name="val_leave_body">Perderás la racha actual de</string>
+    <string name="val_leave_body_2">si abandonas.</string>
+    <string name="val_leave_button_yes">Salir</string>
+    <string name="val_leave_button_no">Cancelar</string>
+    <string name="val_vefify_answer">Verificar</string>
+    <string name="val_clean_answer">Limpiar</string>
+    <string name="val_change_letter">Cambiar Letra</string>
+    <string name="val_alert_success_title">¡Bien hecho!</string>
+    <string name="val_alert_success_body">Has escrito correctamente la letra.</string>
+    <string name="val_alert_continue_button">Seguir</string>
+
+
 </resources>
