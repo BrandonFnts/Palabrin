@@ -21,10 +21,10 @@
 ## 📱 Screenshots
 
 <div align="center">
-<img src="public/screenshots/1.webp" width="25%" />
-<img src="public/screenshots/2.webp" width="25%" />
-<img src="public/screenshots/3.webp" width="25%" />
-<img src="public/screenshots/4.webp" width="25%" />
+<img src="public/screenshots/1.webp" width="20%" />
+<img src="public/screenshots/2.webp" width="20%" />
+<img src="public/screenshots/3.webp" width="20%" />
+<img src="public/screenshots/4.webp" width="20%" />
 </div>
 
 <br>
