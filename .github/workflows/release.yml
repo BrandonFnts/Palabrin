@@ -38,16 +38,16 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          echo $KEYSTORE_BASE64 | base64 -d > release.jks
+          echo "${KEYSTORE_BASE64}" | tr -d '\n ' | base64 -d > release.jks
           
           APK_PATH=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
           
           /usr/local/lib/android/sdk/build-tools/35.0.0/apksigner sign --ks release.jks \
-            --ks-pass pass:$KEYSTORE_PASSWORD \
-            --ks-key-alias $KEY_ALIAS \
-            --key-pass pass:$KEY_PASSWORD \
+            --ks-pass "pass:$KEYSTORE_PASSWORD" \
+            --ks-key-alias "$KEY_ALIAS" \
+            --key-pass "pass:$KEY_PASSWORD" \
             --out app-release-signed.apk \
-            $APK_PATH
+            "$APK_PATH"
             
           echo "signed_apk=app-release-signed.apk" >> $GITHUB_OUTPUT
 
